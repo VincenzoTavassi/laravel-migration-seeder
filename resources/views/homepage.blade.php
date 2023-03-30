@@ -11,7 +11,7 @@
     <div class="container">
         <h1 class="my-5 text-center">Lista treni</h1>
         <div class="row row-cols-4">
-            Treno
+            @include('partials._train-table')
         </div>
     </div>
 </body>
