@@ -8,11 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-5 text-center">Lista treni</h1>
-        <div class="row row-cols-4">
-            @include('partials._train-table')
+    <main>
+    <div class="container my-3">
+        <h2 class="my-5 text-center">Lista treni di oggi {{$today}}</h2>
+            @include('partials._train-table', ['trains' => $today_trains])
         </div>
     </div>
+    <div class="container my-3">
+        <h2 class="my-5 text-center">Lista altri treni</h2>
+            @include('partials._train-table', ['trains' => $other_trains])
+        </div>
+    </div>
+    </main>
 </body>
 </html>
